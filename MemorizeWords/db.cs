@@ -24,6 +24,14 @@ namespace MemorizeWords
             conn.ConnectionString = "data source=Memorize.db";
             adapter = fact.CreateDataAdapter();
             adapter.SelectCommand = conn.CreateCommand();
+            DbCommand com = fact.CreateCommand();
+            conn.Open();
+            com.Connection = conn;
+           
+            com.CommandText= "CREATE TABLE IF NOT EXISTS 'dic' ('Word'  TEXT NOT NULL,'Meaning'   TEXT NOT NULL,'ID'    INTEGER NOT NULL,'ve'    BLOB,'va'    BLOB,PRIMARY KEY('Word'));";
+            com.ExecuteNonQuery();
+            conn.Close();
+            
         }
         public DataTable Get()
         {
