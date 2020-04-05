@@ -57,6 +57,8 @@ namespace MemorizeWords
                 MessageBox.Show("You Entered this Word Before");
                 tword.BackColor = Color.Red;
             }
+            tword.Text = "";
+            tmean.Text = "";
             tword.Focus();
            
         }
