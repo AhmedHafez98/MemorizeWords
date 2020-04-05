@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MemorizeWords
 {
     public partial class Removef : Form
@@ -48,6 +49,7 @@ namespace MemorizeWords
                     dataGridView1.Rows.RemoveAt(i);
                 }
             }
+            M.mydb.UDT(M.dt);
             M.dt.AcceptChanges();
             for (int i = 0; i < M.dt.Rows.Count; i++)
                 M.dt.Rows[i]["ID"] = i + 1;

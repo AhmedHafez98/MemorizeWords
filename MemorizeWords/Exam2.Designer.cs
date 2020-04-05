@@ -28,12 +28,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tword = new System.Windows.Forms.TextBox();
+            this.badd = new System.Windows.Forms.Button();
+            this.gword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gmean = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tgrade = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gword,
+            this.gmean});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dataGridView1.Location = new System.Drawing.Point(-2, -2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(398, 356);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // tword
+            // 
+            this.tword.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tword.Enabled = false;
+            this.tword.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.tword.Location = new System.Drawing.Point(12, 373);
+            this.tword.Name = "tword";
+            this.tword.Size = new System.Drawing.Size(78, 26);
+            this.tword.TabIndex = 3;
+            this.tword.Text = "00:00:00";
+            // 
+            // badd
+            // 
+            this.badd.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.badd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.badd.Location = new System.Drawing.Point(144, 370);
+            this.badd.Name = "badd";
+            this.badd.Size = new System.Drawing.Size(98, 31);
+            this.badd.TabIndex = 5;
+            this.badd.Text = "Finish";
+            this.badd.UseVisualStyleBackColor = true;
+            this.badd.Click += new System.EventHandler(this.badd_Click);
+            // 
+            // gword
+            // 
+            this.gword.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gword.HeaderText = "Word";
+            this.gword.Name = "gword";
+            // 
+            // gmean
+            // 
+            this.gmean.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.gmean.HeaderText = "Meaning";
+            this.gmean.Name = "gmean";
+            this.gmean.ReadOnly = true;
+            this.gmean.Width = 72;
+            // 
+            // tgrade
+            // 
+            this.tgrade.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tgrade.Enabled = false;
+            this.tgrade.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.tgrade.Location = new System.Drawing.Point(275, 373);
+            this.tgrade.Name = "tgrade";
+            this.tgrade.Size = new System.Drawing.Size(78, 26);
+            this.tgrade.TabIndex = 6;
+            this.tgrade.Visible = false;
+            // 
+            // Exam2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(394, 411);
+            this.Controls.Add(this.tgrade);
+            this.Controls.Add(this.badd);
+            this.Controls.Add(this.tword);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "Exam2";
             this.Text = "Exam2";
+            this.Load += new System.EventHandler(this.Exam2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox tword;
+        private System.Windows.Forms.Button badd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gmean;
+        private System.Windows.Forms.TextBox tgrade;
     }
 }

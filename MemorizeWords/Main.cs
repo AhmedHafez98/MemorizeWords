@@ -26,7 +26,7 @@ namespace MemorizeWords
             InitializeComponent();
         }
         // database 
-        db mydb;
+        public db mydb;
         public DataTable dt;
         BindingSource bs = new BindingSource();
         
@@ -66,6 +66,13 @@ namespace MemorizeWords
             this.Enabled = false;
             Removeform = new Removef(this);
             Removeform.Show();
+        }
+
+        private void test_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            Exam1form = new Exam1(this);
+            Exam1form.Show();
         }
     }
 }

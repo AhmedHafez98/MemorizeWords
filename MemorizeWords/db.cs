@@ -2,7 +2,7 @@
 using System.Data.Common;
 namespace MemorizeWords
 {
-    class db
+   public class db
     {
 
         private string TableName;
