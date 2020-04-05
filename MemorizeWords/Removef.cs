@@ -24,6 +24,7 @@ namespace MemorizeWords
             this.FormClosed += MainPage_FormClosed;
             DataGridViewCheckBoxColumn dc = new DataGridViewCheckBoxColumn();
             dc.HeaderText = "Delete";
+            
             dataGridView1.Columns.Add(dc);
             foreach (DataRow dr in M.dt.Rows)
                 dataGridView1.Rows.Add(dr["Word"].ToString(),false);
@@ -47,11 +48,20 @@ namespace MemorizeWords
                     dataGridView1.Rows.RemoveAt(i);
                 }
             }
+            M.dt.AcceptChanges();
             for (int i = 0; i < M.dt.Rows.Count; i++)
                 M.dt.Rows[i]["ID"] = i + 1;
             
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = dataGridView1.Rows.Count - 1; i >= 0; i--)
+            {
+                dataGridView1.Rows[i].Cells[1].Value=true;
+            }
         }
     }
 }

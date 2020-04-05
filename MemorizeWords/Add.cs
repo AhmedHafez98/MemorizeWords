@@ -73,11 +73,28 @@ namespace MemorizeWords
         private void tword_TextChanged(object sender, EventArgs e)
         {
             tword.BackColor = Color.LightSteelBlue;
+            
         }
 
         private void tmean_TextChanged(object sender, EventArgs e)
         {
             tmean.BackColor = Color.LightSteelBlue;
+        }
+
+        private void tword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                badd_Click(sender,e);
+            }
+        }
+
+        private void tmean_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                badd_Click(sender, e);
+            }
         }
     }
 }

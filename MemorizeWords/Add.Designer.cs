@@ -64,6 +64,7 @@
             this.tword.Size = new System.Drawing.Size(160, 26);
             this.tword.TabIndex = 2;
             this.tword.TextChanged += new System.EventHandler(this.tword_TextChanged);
+            this.tword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tword_KeyDown);
             // 
             // tmean
             // 
@@ -74,6 +75,7 @@
             this.tmean.Size = new System.Drawing.Size(160, 26);
             this.tmean.TabIndex = 3;
             this.tmean.TextChanged += new System.EventHandler(this.tmean_TextChanged);
+            this.tmean.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tmean_KeyDown);
             // 
             // badd
             // 
