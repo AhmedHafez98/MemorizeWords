@@ -19,7 +19,7 @@ namespace MemorizeWords
         // Forms
         Add addform;
         Exam1 Exam1form;
-        Remove Removeform;
+        Removef Removeform;
 
         public Main()
         {
@@ -36,8 +36,8 @@ namespace MemorizeWords
             dt = mydb.Get();
             bs.DataSource = dt;
             dataGridView1.DataSource = bs;
-            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns[4].Visible = false;
             dataGridView1.Columns[3].Visible = false;
@@ -59,6 +59,13 @@ namespace MemorizeWords
             this.Enabled = false;
             addform = new Add(this);
             addform.Show();
+        }
+
+        private void remove_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            Removeform = new Removef(this);
+            Removeform.Show();
         }
     }
 }

@@ -40,8 +40,6 @@ namespace MemorizeWords
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
@@ -66,7 +64,7 @@ namespace MemorizeWords
             // add
             // 
             this.add.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(21, 362);
+            this.add.Location = new System.Drawing.Point(32, 362);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(96, 34);
             this.add.TabIndex = 1;
@@ -77,17 +75,18 @@ namespace MemorizeWords
             // remove
             // 
             this.remove.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.remove.Location = new System.Drawing.Point(141, 362);
+            this.remove.Location = new System.Drawing.Point(152, 362);
             this.remove.Name = "remove";
             this.remove.Size = new System.Drawing.Size(121, 34);
             this.remove.TabIndex = 2;
             this.remove.Text = "Remove Words";
             this.remove.UseVisualStyleBackColor = true;
+            this.remove.Click += new System.EventHandler(this.remove_Click);
             // 
             // test
             // 
             this.test.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.test.Location = new System.Drawing.Point(280, 362);
+            this.test.Location = new System.Drawing.Point(291, 362);
             this.test.Name = "test";
             this.test.Size = new System.Drawing.Size(86, 34);
             this.test.TabIndex = 3;
@@ -100,7 +99,7 @@ namespace MemorizeWords
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(407, 403);
+            this.ClientSize = new System.Drawing.Size(401, 403);
             this.Controls.Add(this.test);
             this.Controls.Add(this.remove);
             this.Controls.Add(this.add);

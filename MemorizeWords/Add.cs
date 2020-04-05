@@ -19,10 +19,11 @@ namespace MemorizeWords
             InitializeComponent();
             M = m;
         }
-
+        DataTable x;
         private void Add_Load(object sender, EventArgs e)
         {
             this.FormClosed += MainPage_FormClosed;
+            
         }
         private void MainPage_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -57,6 +58,7 @@ namespace MemorizeWords
                 tword.BackColor = Color.Red;
             }
             tword.Focus();
+           
         }
         bool tstchk(string t)
         {
