@@ -51,7 +51,7 @@
             this.spin1.Font = new System.Drawing.Font("Tahoma", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spin1.Location = new System.Drawing.Point(242, 35);
             this.spin1.Minimum = new decimal(new int[] {
-            10,
+            1,
             0,
             0,
             0});
