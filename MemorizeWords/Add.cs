@@ -87,7 +87,7 @@ namespace MemorizeWords
         {
             if (e.KeyCode == Keys.Enter)
             {
-                badd_Click(sender,e);
+                tmean.Focus();
             }
         }
 

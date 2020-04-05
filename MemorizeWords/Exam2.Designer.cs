@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exam2));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gmean = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -122,6 +123,7 @@
             this.Controls.Add(this.badd);
             this.Controls.Add(this.tword);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Exam2";
             this.Text = "Exam2";
             this.Load += new System.EventHandler(this.Exam2_Load);

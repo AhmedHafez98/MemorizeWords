@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exam1));
             this.label1 = new System.Windows.Forms.Label();
             this.spin1 = new System.Windows.Forms.NumericUpDown();
             this.bget = new System.Windows.Forms.Button();
@@ -88,6 +89,7 @@
             this.Controls.Add(this.spin1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Exam1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exam1";

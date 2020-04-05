@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Removef));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.bdel = new System.Windows.Forms.Button();
             this.gword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdel = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +53,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(329, 316);
             this.dataGridView1.TabIndex = 0;
             // 
+            // gword
+            // 
+            this.gword.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gword.HeaderText = "Word";
+            this.gword.Name = "gword";
+            this.gword.ReadOnly = true;
+            // 
             // bdel
             // 
             this.bdel.Location = new System.Drawing.Point(92, 322);
@@ -61,13 +69,6 @@
             this.bdel.Text = "Delete";
             this.bdel.UseVisualStyleBackColor = true;
             this.bdel.Click += new System.EventHandler(this.bdel_Click);
-            // 
-            // gword
-            // 
-            this.gword.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.gword.HeaderText = "Word";
-            this.gword.Name = "gword";
-            this.gword.ReadOnly = true;
             // 
             // button1
             // 
@@ -91,7 +92,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Removef";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remove";
