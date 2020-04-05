@@ -76,7 +76,7 @@ namespace MemorizeWords
                 else
                 {
                     dataGridView1.Rows[i].Cells[0].Style.BackColor = Color.Crimson;
-                    dataGridView1.Rows[i].Cells[0].Value += "->" + en.Key;
+                    dataGridView1.Rows[i].Cells[0].Value += "  -->  " + en.Key;
                 }
                 i++;
             }
@@ -84,6 +84,7 @@ namespace MemorizeWords
             tgrade.Text = cnt.ToString() + " / " + ans.Count.ToString();
             tgrade.Visible = true;
             dataGridView1.Enabled = false;
+            badd.Enabled = false;
         }
     }
 }

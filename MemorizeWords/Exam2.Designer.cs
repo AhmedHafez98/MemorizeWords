@@ -30,10 +30,10 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tword = new System.Windows.Forms.TextBox();
-            this.badd = new System.Windows.Forms.Button();
             this.gword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gmean = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tword = new System.Windows.Forms.TextBox();
+            this.badd = new System.Windows.Forms.Button();
             this.tgrade = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(398, 356);
             this.dataGridView1.TabIndex = 1;
             // 
+            // gword
+            // 
+            this.gword.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.gword.HeaderText = "Word";
+            this.gword.Name = "gword";
+            // 
+            // gmean
+            // 
+            this.gmean.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.gmean.HeaderText = "Meaning";
+            this.gmean.Name = "gmean";
+            this.gmean.ReadOnly = true;
+            this.gmean.Width = 72;
+            // 
             // tword
             // 
             this.tword.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -87,28 +101,14 @@
             this.badd.UseVisualStyleBackColor = true;
             this.badd.Click += new System.EventHandler(this.badd_Click);
             // 
-            // gword
-            // 
-            this.gword.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.gword.HeaderText = "Word";
-            this.gword.Name = "gword";
-            // 
-            // gmean
-            // 
-            this.gmean.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.gmean.HeaderText = "Meaning";
-            this.gmean.Name = "gmean";
-            this.gmean.ReadOnly = true;
-            this.gmean.Width = 72;
-            // 
             // tgrade
             // 
-            this.tgrade.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.tgrade.BackColor = System.Drawing.Color.LightGreen;
             this.tgrade.Enabled = false;
-            this.tgrade.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.tgrade.Location = new System.Drawing.Point(275, 373);
+            this.tgrade.Font = new System.Drawing.Font("Tahoma", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tgrade.Location = new System.Drawing.Point(271, 369);
             this.tgrade.Name = "tgrade";
-            this.tgrade.Size = new System.Drawing.Size(78, 26);
+            this.tgrade.Size = new System.Drawing.Size(95, 30);
             this.tgrade.TabIndex = 6;
             this.tgrade.Visible = false;
             // 
