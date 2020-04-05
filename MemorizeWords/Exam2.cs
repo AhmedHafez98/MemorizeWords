@@ -31,16 +31,16 @@ namespace MemorizeWords
             for (int i = 0; i < a.Length; i++)
             {
                 if (char.IsUpper(a[i])) ;
-                char.ToLower(a[i]);
+                
                 if (a[i] != ' ')
-                    aa += a[i];
+                    aa += char.ToLower(a[i]);
             }
             for (int i = 0; i < b.Length; i++)
             {
                 if (char.IsUpper(b[i])) ;
-                char.ToLower(b[i]);
+                
                 if (b[i] != ' ')
-                    bb += b[i];
+                    bb += char.ToLower(b[i]);
             }
             return aa == bb;
         }
@@ -70,20 +70,21 @@ namespace MemorizeWords
             {
                 if (cmp(dataGridView1.Rows[i].Cells[0].Value.ToString(), en.Key))
                 {
-                    dataGridView1.Rows[i].Cells[0].Style.BackColor = Color.LawnGreen;
+                    dataGridView1.Rows[i].Visible = false;
                     cnt++;
                 }
                 else
                 {
-                    dataGridView1.Rows[i].Cells[0].Style.BackColor = Color.Crimson;
+                    dataGridView1.Rows[i].Cells[0].Style.ForeColor = Color.Crimson;
                     dataGridView1.Rows[i].Cells[0].Value += "  -->  " + en.Key;
                 }
+                dataGridView1.Rows[i].Cells[0].Selected = false;
                 i++;
             }
 
             tgrade.Text = cnt.ToString() + " / " + ans.Count.ToString();
             tgrade.Visible = true;
-            dataGridView1.Enabled = false;
+            //dataGridView1.Rows[0].Cells[1].Selected=true;
             badd.Enabled = false;
         }
     }
