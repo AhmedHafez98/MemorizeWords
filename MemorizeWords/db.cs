@@ -8,7 +8,6 @@ namespace MemorizeWords
         private string TableName;
         static DbProviderFactory fact;
         DbDataAdapter adapter;
-
         public db(string _tn)
         {
             TableName = _tn;

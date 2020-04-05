@@ -70,12 +70,12 @@ namespace MemorizeWords
             {
                 if (cmp(dataGridView1.Rows[i].Cells[0].Value.ToString(), en.Key))
                 {
-                    dataGridView1.Rows[i].Cells[0].Style.BackColor = Color.Green;
+                    dataGridView1.Rows[i].Cells[0].Style.BackColor = Color.LawnGreen;
                     cnt++;
                 }
                 else
                 {
-                    dataGridView1.Rows[i].Cells[0].Style.BackColor = Color.Red;
+                    dataGridView1.Rows[i].Cells[0].Style.BackColor = Color.Crimson;
                     dataGridView1.Rows[i].Cells[0].Value += "->" + en.Key;
                 }
                 i++;
@@ -83,6 +83,7 @@ namespace MemorizeWords
 
             tgrade.Text = cnt.ToString() + " / " + ans.Count.ToString();
             tgrade.Visible = true;
+            dataGridView1.Enabled = false;
         }
     }
 }
