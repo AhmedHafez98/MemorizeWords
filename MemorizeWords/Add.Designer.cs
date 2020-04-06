@@ -34,6 +34,7 @@
             this.tword = new System.Windows.Forms.TextBox();
             this.tmean = new System.Windows.Forms.TextBox();
             this.badd = new System.Windows.Forms.Button();
+            this.taddlist = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,17 +70,26 @@
             this.badd.UseVisualStyleBackColor = true;
             this.badd.Click += new System.EventHandler(this.badd_Click);
             // 
+            // taddlist
+            // 
+            resources.ApplyResources(this.taddlist, "taddlist");
+            this.taddlist.Name = "taddlist";
+            this.taddlist.UseVisualStyleBackColor = true;
+            this.taddlist.Click += new System.EventHandler(this.taddlist_Click);
+            // 
             // Add
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.taddlist);
             this.Controls.Add(this.badd);
             this.Controls.Add(this.tmean);
             this.Controls.Add(this.tword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Add";
             this.Load += new System.EventHandler(this.Add_Load);
             this.ResumeLayout(false);
@@ -94,5 +104,6 @@
         private System.Windows.Forms.TextBox tword;
         private System.Windows.Forms.TextBox tmean;
         private System.Windows.Forms.Button badd;
+        private System.Windows.Forms.Button taddlist;
     }
 }

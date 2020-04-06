@@ -14,6 +14,7 @@ namespace MemorizeWords
     public partial class Add : Form
     {
         Main M;
+        Addlist addlistfrom;
         public Add(Main m)
         {
             InitializeComponent();
@@ -97,6 +98,13 @@ namespace MemorizeWords
             {
                 badd_Click(sender, e);
             }
+        }
+
+        private void taddlist_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            addlistfrom = new Addlist(M,this);
+            addlistfrom.Show();
         }
     }
 }

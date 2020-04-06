@@ -124,6 +124,7 @@
             this.Controls.Add(this.ttimer);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "Exam2";
             this.Text = "Exam2";
             this.Load += new System.EventHandler(this.Exam2_Load);

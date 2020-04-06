@@ -24,7 +24,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>MemorizeWords</ProductName>
     <PublisherName>Ahmed Hafez</PublisherName>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -61,6 +61,13 @@
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -99,6 +106,12 @@
     <Compile Include="Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Addlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addlist.Designer.cs">
+      <DependentUpon>Addlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="db.cs" />
     <Compile Include="Exam1.cs">
       <SubType>Form</SubType>
@@ -129,6 +142,9 @@
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Addlist.resx">
+      <DependentUpon>Addlist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Exam1.resx">
       <DependentUpon>Exam1.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +167,7 @@
       <DependentUpon>Removef.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
