@@ -49,6 +49,8 @@
             // 
             // tword
             // 
+            this.tword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.tword.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.tword, "tword");
             this.tword.Name = "tword";
@@ -57,6 +59,8 @@
             // 
             // tmean
             // 
+            this.tmean.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.tmean.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.tmean.BackColor = System.Drawing.SystemColors.InactiveCaption;
             resources.ApplyResources(this.tmean, "tmean");
             this.tmean.Name = "tmean";

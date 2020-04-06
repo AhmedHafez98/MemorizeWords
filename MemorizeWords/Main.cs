@@ -31,6 +31,7 @@ namespace MemorizeWords
         public db mydb;
         public DataTable dt;
         BindingSource bs = new BindingSource();
+        public AutoCompleteStringCollection Enwords;
         
         private void Main_Load(object sender, EventArgs e)
         {
@@ -48,7 +49,13 @@ namespace MemorizeWords
                 dataGridView1.Columns[1].Width +
                 dataGridView1.Columns[2].Width+18;
             dataGridView1.Width = this.Width;
-            
+            // add autocomplete
+            Enwords = new AutoCompleteStringCollection();
+            DataTable autodt = mydb.Autocomp();
+            foreach(DataRow dr in autodt.Rows)
+            {
+                Enwords.Add(dr["Word"].ToString());
+            }
 
         }
         private void MainPage_FormClosed(object sender, FormClosedEventArgs e)

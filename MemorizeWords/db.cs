@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Data.Common;
+
 namespace MemorizeWords
 {
    public class db
@@ -20,13 +21,13 @@ namespace MemorizeWords
                             "System.Data.SQLite.SQLiteFactory, System.Data.SQLite");
             fact = DbProviderFactories.GetFactory(dt.Rows[0]);
             DbConnection conn = fact.CreateConnection();
-            conn.ConnectionString = "data source=Memorize.db";
+            conn.ConnectionString = "data source="+ @"Memorize.db";
             adapter = fact.CreateDataAdapter();
             adapter.SelectCommand = conn.CreateCommand();
             DbCommand com = fact.CreateCommand();
             conn.Open();
             com.Connection = conn;
-           
+            
             com.CommandText= "CREATE TABLE IF NOT EXISTS 'dic' ('Word'  TEXT NOT NULL,'Meaning'   TEXT NOT NULL,'ID'    INTEGER NOT NULL,'ve'    BLOB,'va'    BLOB,PRIMARY KEY('Word'));";
             com.ExecuteNonQuery();
             conn.Close();
@@ -46,6 +47,15 @@ namespace MemorizeWords
         public void UDT(DataTable dt)
         {
             adapter.Update(dt);
+        }
+        public DataTable Autocomp()
+        {
+            adapter.SelectCommand.CommandText = "select * from " + "autocomplete";
+            DbCommandBuilder cb = fact.CreateCommandBuilder();
+            cb.DataAdapter = adapter;
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
         }
 
 
