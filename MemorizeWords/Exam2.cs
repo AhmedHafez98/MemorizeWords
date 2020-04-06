@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace MemorizeWords
@@ -15,6 +16,8 @@ namespace MemorizeWords
         Main M;
         int Num;
         Dictionary<string, string> ans;
+        System.Timers.Timer t;
+        int th, tm, ts;
         public Exam2(Main m,int n)
         {
             InitializeComponent();
@@ -24,6 +27,8 @@ namespace MemorizeWords
         private void MainPage_FormClosed(object sender, FormClosedEventArgs e)
         {
             M.Visible = true;
+            t.Stop();
+            
         }
         bool cmp(string a, string b)
         {
@@ -59,6 +64,25 @@ namespace MemorizeWords
             {
                 dataGridView1.Rows.Add("", en.Value);
             }
+            t = new System.Timers.Timer();
+            t.Interval = 1000;
+            t.Elapsed += OnTimeEvent;
+            t.Start();
+        }
+
+        private void OnTimeEvent(object sender, ElapsedEventArgs e)
+        {
+            Invoke(new Action(() =>
+            {
+                ts += 1;
+                if (ts == 60) {
+                    ts = 0; tm += 1; }
+                if (tm == 60)
+                {
+                    tm = 0;th += 1;
+                }
+                ttimer.Text = string.Format("{0}:{1}:{2}", th.ToString().PadLeft(2,'0'), tm.ToString().PadLeft(2,'0'), ts.ToString().PadLeft(2,'0'));
+            }));
         }
 
         private void badd_Click(object sender, EventArgs e)
@@ -86,6 +110,7 @@ namespace MemorizeWords
             tgrade.Visible = true;
             //dataGridView1.Rows[0].Cells[1].Selected=true;
             badd.Enabled = false;
+            t.Stop();
         }
     }
 }

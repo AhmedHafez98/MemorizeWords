@@ -33,7 +33,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gmean = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tword = new System.Windows.Forms.TextBox();
+            this.ttimer = new System.Windows.Forms.TextBox();
             this.badd = new System.Windows.Forms.Button();
             this.tgrade = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -79,16 +79,16 @@
             this.gmean.ReadOnly = true;
             this.gmean.Width = 72;
             // 
-            // tword
+            // ttimer
             // 
-            this.tword.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.tword.Enabled = false;
-            this.tword.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
-            this.tword.Location = new System.Drawing.Point(12, 373);
-            this.tword.Name = "tword";
-            this.tword.Size = new System.Drawing.Size(78, 26);
-            this.tword.TabIndex = 3;
-            this.tword.Text = "00:00:00";
+            this.ttimer.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ttimer.Enabled = false;
+            this.ttimer.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold);
+            this.ttimer.Location = new System.Drawing.Point(12, 373);
+            this.ttimer.Name = "ttimer";
+            this.ttimer.Size = new System.Drawing.Size(78, 26);
+            this.ttimer.TabIndex = 3;
+            this.ttimer.Text = "00:00:00";
             // 
             // badd
             // 
@@ -121,7 +121,7 @@
             this.ClientSize = new System.Drawing.Size(394, 411);
             this.Controls.Add(this.tgrade);
             this.Controls.Add(this.badd);
-            this.Controls.Add(this.tword);
+            this.Controls.Add(this.ttimer);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Exam2";
@@ -136,7 +136,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox tword;
+        private System.Windows.Forms.TextBox ttimer;
         private System.Windows.Forms.Button badd;
         private System.Windows.Forms.DataGridViewTextBoxColumn gword;
         private System.Windows.Forms.DataGridViewTextBoxColumn gmean;
