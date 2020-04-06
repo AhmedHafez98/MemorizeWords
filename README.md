@@ -9,4 +9,6 @@
   5-show wrong words and it's **correction** after exam  
   6-delete words  
   7-executable file **(EXE)** attached to the project  
+  8-change the order of word in each exam  
+  9-ability to read words by clickingin the word  
 ## You can install the program from MemoEnglish.msi
