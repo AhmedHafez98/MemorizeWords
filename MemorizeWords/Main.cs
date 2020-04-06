@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MemorizeWords;
+using System.Speech;
+using System.Speech.Synthesis;
 
 // This is the code for your desktop app.
 // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
@@ -73,6 +75,12 @@ namespace MemorizeWords
             this.Enabled = false;
             Exam1form = new Exam1(this);
             Exam1form.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SpeechSynthesizer reader = new SpeechSynthesizer();
+            reader.SpeakAsync(dataGridView1.CurrentCell.Value.ToString());
         }
     }
 }
