@@ -24,6 +24,7 @@ namespace MemorizeWords
         private void Add_Load(object sender, EventArgs e)
         {
             this.FormClosed += MainPage_FormClosed;
+            tword.AutoCompleteCustomSource = M.Enwords;
             
         }
         private void MainPage_FormClosed(object sender, FormClosedEventArgs e)
@@ -76,13 +77,14 @@ namespace MemorizeWords
         private void tword_TextChanged(object sender, EventArgs e)
         {
             tword.BackColor = Color.LightSteelBlue;
-            tword.AutoCompleteCustomSource = M.Enwords;
+            
+            
         }
 
         private void tmean_TextChanged(object sender, EventArgs e)
         {
             tmean.BackColor = Color.LightSteelBlue;
-            tmean.AutoCompleteCustomSource = M.Enwords;
+           // tmean.AutoCompleteCustomSource = M.Enwords;
         }
 
         private void tword_KeyDown(object sender, KeyEventArgs e)

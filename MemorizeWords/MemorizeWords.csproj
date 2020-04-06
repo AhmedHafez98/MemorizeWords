@@ -168,6 +168,7 @@
     <EmbeddedResource Include="Removef.resx">
       <DependentUpon>Removef.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Memorize.db" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">

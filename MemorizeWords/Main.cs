@@ -54,8 +54,10 @@ namespace MemorizeWords
             DataTable autodt = mydb.Autocomp();
             foreach(DataRow dr in autodt.Rows)
             {
+                if(dr["Word"].ToString()!="")
                 Enwords.Add(dr["Word"].ToString());
             }
+            
 
         }
         private void MainPage_FormClosed(object sender, FormClosedEventArgs e)

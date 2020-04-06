@@ -9,6 +9,7 @@ namespace MemorizeWords
         private string TableName;
         static DbProviderFactory fact;
         DbDataAdapter adapter;
+        DbDataAdapter adp;
         public db(string _tn)
         {
             TableName = _tn;
@@ -21,9 +22,11 @@ namespace MemorizeWords
                             "System.Data.SQLite.SQLiteFactory, System.Data.SQLite");
             fact = DbProviderFactories.GetFactory(dt.Rows[0]);
             DbConnection conn = fact.CreateConnection();
-            conn.ConnectionString = "data source="+ @"Memorize.db";
+            conn.ConnectionString = "data source="+ @"C:\Program Files (x86)\AhmedHafez\MemoEnglish\Memorize.db";
             adapter = fact.CreateDataAdapter();
             adapter.SelectCommand = conn.CreateCommand();
+            adp = fact.CreateDataAdapter();
+            adp.SelectCommand = conn.CreateCommand();
             DbCommand com = fact.CreateCommand();
             conn.Open();
             com.Connection = conn;
@@ -50,11 +53,12 @@ namespace MemorizeWords
         }
         public DataTable Autocomp()
         {
-            adapter.SelectCommand.CommandText = "select * from " + "autocomplete";
+            
+            adp.SelectCommand.CommandText = "select * from " + "autocomplete";
             DbCommandBuilder cb = fact.CreateCommandBuilder();
-            cb.DataAdapter = adapter;
+            cb.DataAdapter = adp;
             DataTable dt = new DataTable();
-            adapter.Fill(dt);
+            adp.Fill(dt);
             return dt;
         }
 
