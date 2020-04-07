@@ -22,7 +22,7 @@ namespace MemorizeWords
                             "System.Data.SQLite.SQLiteFactory, System.Data.SQLite");
             fact = DbProviderFactories.GetFactory(dt.Rows[0]);
             DbConnection conn = fact.CreateConnection();
-            conn.ConnectionString = "data source=Memorize.db";
+            conn.ConnectionString = "data source="+ @"C:\Program Files (x86)\AhmedHafez\MemoEnglish\Memorize.db";
             adapter = fact.CreateDataAdapter();
             adapter.SelectCommand = conn.CreateCommand();
             adp = fact.CreateDataAdapter();
