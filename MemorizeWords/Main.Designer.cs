@@ -64,6 +64,7 @@ namespace MemorizeWords
             // 
             resources.ApplyResources(this.add, "add");
             this.add.Name = "add";
+            this.add.Tag = "click to Add new Word";
             this.add.UseVisualStyleBackColor = true;
             this.add.Click += new System.EventHandler(this.add_Click);
             // 
