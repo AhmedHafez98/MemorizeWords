@@ -10,5 +10,5 @@
   6-delete words  
   7-executable file **(EXE)** attached to the project  
   8-change the order of word in each exam  
-  9-ability to read words by clickingin the word  
+  9-ability to read words by clicking on the word  
 ## You can install the program from MemoEnglish.msi
